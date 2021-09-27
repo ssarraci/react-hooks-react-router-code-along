@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Route } from "react-router-dom" 
 
 function Home() {
   return (
@@ -9,4 +10,11 @@ function Home() {
   );
 }
 
-ReactDOM.render(<Home />, document.getElementById("root"));
+ReactDOM.render(
+  <BrowserRouter>
+    <Route path="/">
+      <Home />
+    </Route>
+  </BrowserRouter>, 
+  document.getElementById("root")
+  );
